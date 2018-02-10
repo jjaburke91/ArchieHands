@@ -22,6 +22,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-sass": "^1.0.16",
+    "gh-pages": "^1.1.0",
     "prettier": "^1.10.2"
   }
 }
