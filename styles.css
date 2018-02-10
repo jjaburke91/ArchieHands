@@ -1,1 +1,1 @@
-h1{color:red!important}
+body,html{background-color:#f0f1f6;font-family:Arimo,Arial;font-weight:lighter;color:#fff}h1,h2,h3,h4,h5{margin:0}#home__content{position:absolute;z-index:1;top:45vh;left:0;right:36%;padding:15px 32px;background-color:rgba(136,175,29,.85);text-align:right}#home__content h1{font-size:42px}#home__content h2{font-size:14px}#home__content__body{font-size:13px}#home__img{position:absolute;top:0;bottom:0;right:0;left:0;z-index:0;padding-top:12%}#home__img,#home__img img{max-width:100%}
