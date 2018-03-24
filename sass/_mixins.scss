@@ -1,0 +1,93 @@
+$mq-extend-flag: true !global;
+//*****************************************
+//  UTILITIES
+//*****************************************
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin animation-delay($str) {
+    -webkit-animation-delay: #{$str};
+    -moz-animation-delay: #{$str};
+    -ms-animation-delay: #{$str};
+    -o-animation-delay: #{$str};
+    animation-delay: #{$str};
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin text-clamp($font-size, $line-height, $lines) {
+    font-size: $font-size;
+    line-height: $line-height;
+    height: $lines*$font-size*$line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @supports (-webkit-line-clamp: 1) {
+        display: -webkit-box;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical
+    }
+}
+
+@mixin unselectable() {
+    user-select: none;
+}
+
+@mixin mobile-detect() {
+    display: none;
+    @media (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (orientation: portrait) {
+        display: block;
+    }
+}

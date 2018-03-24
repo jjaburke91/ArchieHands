@@ -1,0 +1,7 @@
+@import './mixins';
+
+.vertical-absolute-center {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}

@@ -1,0 +1,15 @@
+@import "./settings";
+
+.text-bold {
+    font-weight: bold;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-green {
+    color: $hands-green;
+}

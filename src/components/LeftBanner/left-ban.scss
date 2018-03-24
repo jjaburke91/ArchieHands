@@ -1,0 +1,49 @@
+@import "../../../sass/mixins";
+
+.left-ban {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0;
+    width: 200px;
+    padding-left: 65px;
+
+    background-color: white;
+    color: #9D9D9D;
+
+    .vertical-absolute-center {
+        margin-top: -2vh;
+    }
+}
+
+.left-ban__heading {
+    white-space: nowrap;
+
+    h1 {
+        font-size: 49px;
+        @include transform(translateX(-23px))
+
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
+
+.left-ban__labels, .left-ban__contact {
+    font-size: 14px;
+}
+
+.left-ban__labels {
+    margin-top: 74px;
+}
+.left-ban__labels p, .left-ban__contact p {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.left-ban__contact {
+    margin-top: 77px;
+}
+
+
+
+

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import '../../sass/_global.scss';
+import '../../sass/style.scss';
 
 const websiteName = "Archie Hands";
 const websiteDescription = "WEBSITE DESCRIPTION";

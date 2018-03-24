@@ -1,14 +1,18 @@
 
 html, body {
-    background-color: #f0f1f6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 
-    font-family: "Arimo", Arial;
-    font-weight: lighter;
     color: white;
+    font-family: "Arimo", Arial, sans-serif;
+    font-weight: lighter;
+    background-color: #f0f1f6;
 }
 
 h1, h2, h3, h4, h5 {
     margin: 0;
+    font-weight: inherit;
 }
 
 
