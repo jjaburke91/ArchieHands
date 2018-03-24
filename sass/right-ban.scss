@@ -1,0 +1,38 @@
+@import 'mixins';
+
+$right-banner-width: 45px;
+
+.right-ban {
+    position: absolute;
+    right: 0;
+    top: 0; bottom: 0;
+    width: $right-banner-width;
+
+    white-space: nowrap;
+
+    background-color: white;
+
+    .vertical-absolute-center {
+        height: 400px;
+        margin-left: 0 - ($right-banner-width / 2);
+    }
+}
+
+.right-ban__logo img {
+    width: $right-banner-width;
+    height: $right-banner-width;
+}
+
+.right-ban__controls {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+.right-ban__controls .hands-btn {
+    display: block;
+    text-transform: uppercase;
+
+    width: $right-banner-width;
+    height: $right-banner-width;
+    @include border-radius($right-banner-width / 2);
+}

@@ -1,0 +1,12 @@
+@import "mixins";
+
+.hands-btn {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+
+    background-color: #D8D8D8;
+    color: white;
+
+    @include border-radius(20px);
+}
