@@ -1,20 +1,19 @@
 import React from 'react'
 
+import ImageBody from '../components/ImageBody';
 import LeftBanner from '../components/LeftBanner';
-
-const isisTableImg = require('../images/isis-table-crop.jpg');
 
 const IndexPage = () => (
     <div id="page">
         <LeftBanner/>
 
         <div id="content">
-            {/*<img src={isisTableImg} />*/}
+            <ImageBody />
         </div>
 
-        <div id="right-ban">
-            <div>logo</div>
-        </div>
+        {/*<div id="right-ban">*/}
+            {/*<div>logo</div>*/}
+        {/*</div>*/}
     </div>
 );
 

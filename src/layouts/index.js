@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import '../../sass/style.scss';
 
-const websiteName = "Archie Hands";
+const websiteName = "Archie Hands - Designer / Maker";
 const websiteDescription = "WEBSITE DESCRIPTION";
 
 const TemplateWrapper = ({children}) => (
@@ -18,9 +18,8 @@ const TemplateWrapper = ({children}) => (
         >
             <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" />
         </Helmet>
-        <div>
-            {children()}
-        </div>
+
+        {children()}
     </div>
 );
 

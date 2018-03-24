@@ -1,4 +1,5 @@
 @import "../../../sass/mixins";
+@import "../../../sass/settings";
 
 .left-ban {
     position: absolute;
@@ -6,6 +7,8 @@
     left: 0;
     width: 200px;
     padding-left: 65px;
+
+    z-index: 100;
 
     background-color: white;
     color: #9D9D9D;
