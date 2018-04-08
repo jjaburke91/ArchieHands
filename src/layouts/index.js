@@ -15,15 +15,12 @@ const websiteDescription = "Archie Hands - Designer / Maker";
 const defaultUrl = "https://www.archiehands.uk";
 const twitterTag = ""; // TODO
 const defaultImageUrl = ""; // TODO
+const keywords = "archie,hands,design,maker,furniture,craft";
 
 const TemplateWrapper = ({children}) => (
     <div>
         <Helmet
             title={websiteName}
-            meta={[
-                {name: "description", content: websiteDescription},
-                {name: 'keywords', content: 'archie,hands,design,maker,furniture,craft'},
-            ]}
         >
             <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
             <link rel="icon" type="image/png" sizes="32x32" href={faviconLarge} />
@@ -33,7 +30,7 @@ const TemplateWrapper = ({children}) => (
             <meta name="theme-color" content="#ffffff" />
 
             <link rel="canonical" href={defaultUrl} />
-
+            <meta name="keywords" content={keywords} />
             <meta name="description" content={websiteDescription} />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={twitterTag} />
