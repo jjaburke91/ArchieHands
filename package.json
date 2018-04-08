@@ -19,7 +19,7 @@
     "serve": "gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "deploy": "gatsby build --prefix-paths && cp CNAME public/ && cp src/images/favicons/* public && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && cp assets/* public && cp src/images/favicons/* public && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
