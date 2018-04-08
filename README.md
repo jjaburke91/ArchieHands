@@ -1,13 +1,14 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Archie Hands
+Built with [Gatsby](https://www.gatsbyjs.org) and Github pages.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+DNS bought with GoDaddy for hosts archiehands.uk and ahdesign.uk. Website is only configured for the former.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+## Develop
+
+```npm run develop```
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```npm run deploy```
+
+Note the deploy script copies the CNAME from the root directory into the public folder. This is for the DNS.
