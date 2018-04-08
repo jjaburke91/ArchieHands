@@ -21,10 +21,10 @@ const IndexPage = () => (
                     <img src={LogoSml}/>
                 </div>
 
-                <div className="right-ban__controls">
-                    <button className="hands-btn right-ban__controls__next" >next </button>
-                    <button className="hands-btn right-ban__controls__prev" >prev</button>
-                </div>
+                {/*<div className="right-ban__controls">*/}
+                    {/*<button className="hands-btn right-ban__controls__next" >next </button>*/}
+                    {/*<button className="hands-btn right-ban__controls__prev" >prev</button>*/}
+                {/*</div>*/}
             </div>
         </div>
     </div>

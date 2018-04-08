@@ -13,7 +13,6 @@ const LeftBanner = () => (
             <div className="left-ban__labels text-green">
                 <p>Bespoke Furniture</p>
                 <p>Fixer</p>
-                <p>Gentle Lover</p>
             </div>
 
             <div className="left-ban__contact text-lowercase">
