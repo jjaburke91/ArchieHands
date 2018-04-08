@@ -16,6 +16,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build && cp CNAME public/",
+    "serve": "gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "deploy": "gatsby build --prefix-paths && cp CNAME public/ && gh-pages -d public",
