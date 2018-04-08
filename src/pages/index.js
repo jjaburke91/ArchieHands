@@ -3,7 +3,7 @@ import React from 'react'
 import ImageBody from '../components/ImageBody';
 import LeftBanner from '../components/LeftBanner';
 
-import '../../sass/right-ban.scss';
+import '../../sass/home.scss';
 
 import LogoSvg from '../images/logo.svg';
 

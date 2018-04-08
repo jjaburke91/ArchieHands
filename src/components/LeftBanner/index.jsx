@@ -5,6 +5,8 @@ import './left-ban.scss';
 const facebookUrl = "";
 const twitterUrl = "";
 
+import logoSvg from "../../images/logo.svg";
+
 class OnHoverEmail extends React.Component {
     constructor(props) {
         super(props);
@@ -45,6 +47,7 @@ const LeftBanner = () => (
     <div className="left-ban">
         <div className="vertical-absolute-center">
             <div className="left-ban__heading">
+
                 <h1 className="text-green">Archie Hands</h1>
                 <h2 className="text-uppercase">designer / maker</h2>
             </div>

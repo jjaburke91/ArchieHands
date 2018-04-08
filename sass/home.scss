@@ -1,6 +1,11 @@
 @import 'mixins';
+@import 'settings';
 
 $right-banner-width: 45px;
+
+#content {
+    margin-left: 265px;
+}
 
 .right-ban {
     position: absolute;
@@ -35,4 +40,14 @@ $right-banner-width: 45px;
     width: $right-banner-width;
     height: $right-banner-width;
     @include border-radius($right-banner-width / 2);
+}
+
+
+@media (max-width: $mobile-width) {
+    .right-ban {
+        display: none;
+    }
+    #content {
+        display: none;
+    }
 }

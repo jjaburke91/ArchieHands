@@ -68,5 +68,28 @@
     min-height: 2.8em;
 }
 
+@media (max-width: $mobile-width) {
+    .left-ban {
+        position: relative;
+        width: auto;
+        max-width: 100%;
+        padding-left: 47px;
+    }
+    .left-ban .vertical-absolute-center {
+        position: relative;
+        top: unset;
+        @include transform(none);
+    }
+
+    .left-ban__heading h1 {
+        font-size: 40px;
+        white-space: unset;
+    }
+
+    .left-ban__labels, .left-ban__contact {
+        margin-top: 40px;
+    }
+}
+
 
 
