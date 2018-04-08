@@ -5,7 +5,7 @@ import LeftBanner from '../components/LeftBanner';
 
 import '../../sass/right-ban.scss';
 
-import LogoSml from '../images/logo_sml.png';
+import LogoSvg from '../images/logo.svg';
 
 const IndexPage = () => (
     <div id="page">
@@ -18,7 +18,7 @@ const IndexPage = () => (
         <div className="right-ban">
             <div className="vertical-absolute-center">
                 <div className="right-ban__logo">
-                    <img src={LogoSml}/>
+                    <img src={LogoSvg}/>
                 </div>
 
                 {/*<div className="right-ban__controls">*/}
