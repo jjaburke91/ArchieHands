@@ -47,6 +47,26 @@
     margin-top: 77px;
 }
 
+.left-ban__socials {
+    padding-top: 60px;
+
+    a {
+        color: $hands-grey;
+        padding: 0 2px;
+        margin: 0 2px;
+
+        &:first-of-type {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+#contact-email {
+    display: inline-block;
+    width: auto;
+    min-height: 2.8em;
+}
 
 
 

@@ -48,6 +48,9 @@ const TemplateWrapper = ({children}) => (
             <meta property="og:image:alt" content={websiteName} />
 
             <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" />
+            <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+                    integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+                    crossOrigin="anonymous" />
         </Helmet>
 
         {children()}
