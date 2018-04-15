@@ -37,8 +37,13 @@
 
 .left-ban__labels {
     margin-top: 74px;
+    max-width: 180px;
 }
-.left-ban__labels p, .left-ban__contact p {
+.left-ban__labels p {
+    margin: 0 0 7px 0;
+    padding: 0;
+}
+.left-ban__contact p {
     margin: 0 0 3px 0;
     padding: 0;
 }
@@ -68,6 +73,18 @@
     min-height: 2.8em;
 }
 
+.instagram-link {
+    font-size: 1.1em;
+}
+.houzz-link {
+    img {
+        position: relative;
+        top: 3px;
+        left: -3px;
+        max-width: 18px;
+    }
+}
+
 @media (max-width: $mobile-width) {
     .left-ban {
         position: relative;
@@ -86,8 +103,26 @@
         white-space: unset;
     }
 
+    .left-ban__labels {
+        max-width: none;
+    }
     .left-ban__labels, .left-ban__contact {
         margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .left-ban__socials {
+        font-size: 1.6em;
+
+        a {
+            padding: 0 3px;
+            margin: 0 4px;
+        }
+    }
+    .houzz-link {
+        img {
+            max-width: 26px;
+        }
     }
 }
 

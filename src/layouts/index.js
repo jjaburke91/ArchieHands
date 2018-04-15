@@ -9,19 +9,19 @@ import faviconSmall from '../images/favicons/favicon-16x16.png';
 import faviconLarge from '../images/favicons/favicon-32x32.png';
 import safariPinnedTab from '../images/favicons/safari-pinned-tab.svg';
 
-const websiteName = "Archie Hands - Designer / Maker";
-const websiteDescription = "Archie Hands - Designer / Maker";
+const websiteName = "Archie Hands - Bespoke Furniture Designer & Maker";
+const websiteDescription = "London based furniture designer specialised in bespoke handmade woodworking.";
 
 const defaultUrl = "https://www.archiehands.uk";
-const twitterTag = ""; // TODO
 const defaultImageUrl = ""; // TODO
-const keywords = "archie,hands,design,maker,furniture,craft";
+const keywords = "Furniture,london,bespoke,handmade,wood,woodworking,carpenter,carpentry,contemporary,designer,design,custom,fine,maker,interior";
 
 const TemplateWrapper = ({children}) => (
     <div>
         <Helmet
             title={websiteName}
         >
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
             <link rel="icon" type="image/png" sizes="32x32" href={faviconLarge} />
             <link rel="icon" type="image/png" sizes="16x16" href={faviconSmall} />
@@ -33,7 +33,6 @@ const TemplateWrapper = ({children}) => (
             <meta name="keywords" content={keywords} />
             <meta name="description" content={websiteDescription} />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content={twitterTag} />
             <meta name="twitter:image" content={defaultImageUrl} />
 
             <meta property="og:description" content={websiteDescription} />

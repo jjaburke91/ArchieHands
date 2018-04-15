@@ -2,10 +2,11 @@ import React from 'react'
 
 import './left-ban.scss';
 
-const facebookUrl = "";
-const twitterUrl = "";
+const facebookUrl = "http://facebook.com/AHandsDesign/";
+const instagramUrl = "https://www.instagram.com/ah_create/";
+const houzzUrl = "https://www.houzz.co.uk/pro/aeahands/ah-create";
 
-import logoSvg from "../../images/logo.svg";
+import houzzSvg from "../../images/houzz.svg";
 
 class OnHoverEmail extends React.Component {
     constructor(props) {
@@ -31,11 +32,16 @@ class OnHoverEmail extends React.Component {
     }
 
     render() {
+        if (window.innerWidth <= 770) {
+            return (
+                <a href="mailto:hello@archiehands.uk" target="_blank" style={{textDecoration:"underline"}}>hello@archiehands.uk</a>
+            )
+        }
         return (
             <div id="contact-email" className="text-green" onMouseEnter={this._onMouseEnter} onMouseLeave={this._onMouseLeave}>
                 {this.state.isOnHover ? "hello@archiehands.uk" : (
                     <span>
-                        hello (at)<br />archiehands.uk
+                        hello (at)<br className="hidden-mobile" /> archiehands.uk
                     </span>
                 )}
             </div>
@@ -47,14 +53,13 @@ const LeftBanner = () => (
     <div className="left-ban">
         <div className="vertical-absolute-center">
             <div className="left-ban__heading">
-
                 <h1 className="text-green">Archie Hands</h1>
                 <h2 className="text-uppercase">designer / maker</h2>
             </div>
 
             <div className="left-ban__labels text-green">
-                <p>Bespoke Furniture</p>
-                <p>Fixer</p>
+                <p>Furniture Designer</p>
+                <p>Bespoke Handmade Woodwork</p>
             </div>
 
             <div className="left-ban__contact text-lowercase">
@@ -64,7 +69,8 @@ const LeftBanner = () => (
 
             <div className="left-ban__socials">
                 <a href={facebookUrl} target="_blank"><i className="fab fa-facebook-f" /></a>
-                <a href={twitterUrl} target="_blank"><i className="fab fa-twitter" /></a>
+                <a href={instagramUrl} className="instagram-link" target="_blank"><i className="fab fa-instagram" /></a>
+                <a href={houzzUrl} className="houzz-link" target="_blank"><img src={houzzSvg}/></a>
             </div>
         </div>
     </div>

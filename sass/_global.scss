@@ -31,7 +31,8 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 a {
-    @include transition(opacity 0.1s ease-in-out)
+    @include transition(opacity 0.1s ease-in-out);
+    color: $hands-green;
 }
 a:visited {
     color: unset;
@@ -40,9 +41,11 @@ a:hover {
     opacity: 0.8;
 }
 
-
 @media (max-width: $mobile-width) {
     #page {
         margin-top: 48px;
+    }
+    .hidden-mobile {
+        display: none;
     }
 }
