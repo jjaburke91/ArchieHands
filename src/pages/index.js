@@ -7,27 +7,64 @@ import '../../sass/home.scss';
 
 import LogoSvg from '../images/logo.svg';
 
-const IndexPage = () => (
-    <div id="page">
-        <LeftBanner/>
+const IGAWI_TABLE = require('../images/igawi-crop-2.jpg');
 
-        <div id="content">
-            <ImageBody />
-        </div>
+const IMAGES = [
+    IGAWI_TABLE,
+    IGAWI_TABLE,
+    IGAWI_TABLE,
+    IGAWI_TABLE,
+];
 
-        <div className="right-ban">
-            <div className="vertical-absolute-center">
-                <div className="right-ban__logo">
-                    <img src={LogoSvg}/>
+class IndexPage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this._nextImage = this._nextImage.bind(this);
+
+        this.state = {
+            imageIndex: 0,
+        }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextState.imageIndex !== this.state.imageIndex;
+    }
+
+    _nextImage() {
+        let nextImageIndex = this.state.imageIndex + 1;
+
+        if (nextImageIndex >= IMAGES.length) nextImageIndex = 0;
+
+        this.setState({
+            imageIndex: nextImageIndex,
+        });
+    }
+
+    render() {
+        return (
+            <div id="page">
+                <LeftBanner/>
+
+                <div id="content">
+                    <ImageBody images={IMAGES} imageIndex={this.state.imageIndex}/>
                 </div>
 
-                {/*<div className="right-ban__controls">*/}
-                    {/*<button className="hands-btn right-ban__controls__next" >next </button>*/}
-                    {/*<button className="hands-btn right-ban__controls__prev" >prev</button>*/}
-                {/*</div>*/}
+                <div className="right-ban">
+                    <div className="vertical-absolute-center">
+                        <div className="right-ban__logo">
+                            <img src={LogoSvg}/>
+                        </div>
+
+                        <div className="right-ban__controls">
+                            <button className="hands-btn right-ban__controls__next" onClick={this._nextImage}>next</button>
+                            <button className="hands-btn right-ban__controls__prev" >prev</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-);
+        );
+    }
+}
 
 export default IndexPage;
