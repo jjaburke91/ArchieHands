@@ -14,6 +14,9 @@ const IMAGES = [
     IGAWI_TABLE,
     IGAWI_TABLE,
     IGAWI_TABLE,
+    IGAWI_TABLE,
+    IGAWI_TABLE,
+    IGAWI_TABLE,
 ];
 
 class IndexPage extends React.Component {
@@ -21,6 +24,7 @@ class IndexPage extends React.Component {
         super(props);
 
         this._nextImage = this._nextImage.bind(this);
+        this._prevImage = this._prevImage.bind(this);
 
         this.state = {
             imageIndex: 0,
@@ -38,6 +42,18 @@ class IndexPage extends React.Component {
 
         this.setState({
             imageIndex: nextImageIndex,
+            direction: "right",
+        });
+    }
+
+    _prevImage() {
+        let nextImageIndex = this.state.imageIndex - 1;
+
+        if (nextImageIndex < 0) nextImageIndex = IMAGES.length - 1;
+
+        this.setState({
+            imageIndex: nextImageIndex,
+            direction: "left",
         });
     }
 
@@ -47,7 +63,7 @@ class IndexPage extends React.Component {
                 <LeftBanner/>
 
                 <div id="content">
-                    <ImageBody images={IMAGES} imageIndex={this.state.imageIndex}/>
+                    <ImageBody images={IMAGES} imageIndex={this.state.imageIndex} direction={this.state.direction}/>
                 </div>
 
                 <div className="right-ban">
@@ -58,7 +74,7 @@ class IndexPage extends React.Component {
 
                         <div className="right-ban__controls">
                             <button className="hands-btn right-ban__controls__next" onClick={this._nextImage}>next</button>
-                            <button className="hands-btn right-ban__controls__prev" >prev</button>
+                            <button className="hands-btn right-ban__controls__prev" onClick={this._prevImage}>prev</button>
                         </div>
                     </div>
                 </div>

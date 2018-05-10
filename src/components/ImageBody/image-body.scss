@@ -1,5 +1,7 @@
 @import '../../../sass/mixins';
 
+$transition-speed: 1.04s;
+
 .images {
     position: relative;
     height: 100vh;
@@ -10,14 +12,25 @@
 
 .images__img-container {
     position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-    @include transform(translateX(100%));
-    @include transition(transform 1s ease-in-out);
+    &.direction-left {
+        @include animation(slideOutToRight $transition-speed forwards);
+    }
+    &.direction-right {
+        @include animation(slideOutToLeft $transition-speed forwards);
+    }
 }
 .images__img-container--display {
-    @include transform(translateX(0));
+    &.direction-left {
+        @include animation(slideInFromRight $transition-speed forwards);
+    }
+    &.direction-right {
+        @include animation(slideInFromLeft $transition-speed forwards);
+    }
 }
 
 .images__img-container__img {
@@ -29,4 +42,39 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
+}
+
+@include keyframes(slideOutToLeft) {
+    from {
+        @include transform(translateX(0));
+    }
+    to {
+        @include transform(translateX(-100%));
+    }
+}
+@include keyframes(slideOutToRight) {
+    from {
+        @include transform(translateX(0));
+    }
+    to {
+        @include transform(translateX(100%));
+    }
+}
+
+
+@include keyframes(slideInFromLeft) {
+    from {
+        @include transform(translateX(100%));
+    }
+    to {
+        @include transform(translateX(0));
+    }
+}
+@include keyframes(slideInFromRight) {
+    from {
+        @include transform(translateX(-100%));
+    }
+    to {
+        @include transform(translateX(0));
+    }
 }
