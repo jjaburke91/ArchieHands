@@ -32,10 +32,10 @@ class OnHoverEmail extends React.Component {
     }
 
     render() {
-        if (window.innerWidth <= 770) {
+        if (typeof window !== "undefined" && window.innerWidth <= 770) {
             return (
                 <a href="mailto:hello@archiehands.uk" target="_blank" style={{textDecoration:"underline"}}>hello@archiehands.uk</a>
-            )
+            );
         }
         return (
             <div id="contact-email" className="text-green" onMouseEnter={this._onMouseEnter} onMouseLeave={this._onMouseLeave}>
