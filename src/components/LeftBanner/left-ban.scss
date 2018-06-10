@@ -27,12 +27,12 @@
 
     }
     h2 {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 .left-ban__labels, .left-ban__contact {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .left-ban__labels {
@@ -57,7 +57,7 @@
 
     a {
         color: $hands-grey;
-        padding: 0 2px;
+        padding: 0 3px;
         margin: 0 2px;
 
         &:first-of-type {
@@ -74,7 +74,10 @@
 }
 
 .instagram-link {
-    font-size: 1.1em;
+    font-size: 1.2em;
+
+    position: relative;
+    top: 1px;
 }
 .houzz-link {
     img {

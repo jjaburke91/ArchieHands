@@ -73,8 +73,12 @@ class IndexPage extends React.Component {
                         </div>
 
                         <div className="right-ban__controls">
-                            <button className="hands-btn right-ban__controls__next" onClick={this._nextImage}>next</button>
-                            <button className="hands-btn right-ban__controls__prev" onClick={this._prevImage}>prev</button>
+                            <button className="hands-btn right-ban__controls__next" onClick={this._nextImage}>
+                                <span className="fas fa-chevron-right" />
+                            </button>
+                            <button className="hands-btn right-ban__controls__prev" onClick={this._prevImage}>
+                                <span className="fas fa-chevron-left" />
+                            </button>
                         </div>
                     </div>
                 </div>
