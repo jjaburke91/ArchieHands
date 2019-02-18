@@ -8,6 +8,8 @@ const houzzUrl = "https://www.houzz.co.uk/pro/aeahands/ah-create";
 
 import houzzSvg from "../../images/houzz.svg";
 
+const EMAIL_ADDRESS = "aeahands@gmail.com";
+
 class OnHoverEmail extends React.Component {
     constructor(props) {
         super(props);
@@ -34,14 +36,14 @@ class OnHoverEmail extends React.Component {
     render() {
         if (typeof window !== "undefined" && window.innerWidth <= 770) {
             return (
-                <a href="mailto:hello@archiehands.uk" target="_blank" style={{textDecoration:"underline"}}>hello@archiehands.uk</a>
+                <a href={`mailto:${EMAIL_ADDRESS}`} target="_blank" style={{textDecoration:"underline"}}>{EMAIL_ADDRESS}</a>
             );
         }
         return (
             <div id="contact-email" className="text-green" onMouseEnter={this._onMouseEnter} onMouseLeave={this._onMouseLeave}>
-                {this.state.isOnHover ? "hello@archiehands.uk" : (
+                {this.state.isOnHover ? EMAIL_ADDRESS : (
                     <span>
-                        hello (at)<br className="hidden-mobile" /> archiehands.uk
+                        aeahands (at)<br className="hidden-mobile" /> gmail.com
                     </span>
                 )}
             </div>
